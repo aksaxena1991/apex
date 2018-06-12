@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-12">
+    <div class="content-header">View Categories</div>
+  </div>
+</div>
+
+<!--Advanced filter Starts-->
+<section id="advanced">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          <!--<h4 class="card-title">Takeaway</h4>-->
+        </div>
+        <div class="card-body">
+          <div class="card-block">
+            <!--<input #search class="search mb-2" type="text" placeholder="Search..." (keydown)="onSearch(search.value)">-->
+            <!--<ng2-smart-table [settings]="settings" [source]="source"-->
+                             <!--(deleteConfirm)="onDeleteConfirm($event)"-->
+                             <!--(editConfirm)="onSaveConfirm($event)"></ng2-smart-table>-->
+            <table class="table table-responsive">
+              <thead>
+              <tr>
+                <th>ID</th>
+                <th>Category Name</th>
+                <th>Parent Category Name</th>
+                <th>Category Description</th>
+                <th>Actions</th>
+              </tr>
+              </thead>
+              <tbody>
+
+              <tr *ngFor="let category of categoryList">
+
+                <td>{{category.category_id}}</td>
+                <td>{{category.category_name}}</td>
+                <td>{{category.parent_category_name}}</td>
+                <td>{{category.category_description}}</td>
+                <td><a [routerLink]="'/inventory/edit-category/'+ category.category_id"><i class="ft-edit"></i></a>
+                  <a (click)="onDeleteConfirm(category.category_id)"><i class="ft-x"></i></a></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Advanced filter Ends-->

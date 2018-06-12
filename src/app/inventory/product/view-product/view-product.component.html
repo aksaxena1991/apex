@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-12">
+    <div class="content-header">View Products</div>
+  </div>
+</div>
+
+<!--Advanced filter Starts-->
+<section id="advanced">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          <!--<h4 class="card-title">Takeaway</h4>-->
+        </div>
+        <div class="card-body">
+          <div class="card-block">
+            <!--<input #search class="search mb-2" type="text" placeholder="Search..." (keydown)="onSearch(search.value)">-->
+            <!--<ng2-smart-table [settings]="settings" [source]="source"-->
+                             <!--(deleteConfirm)="onDeleteConfirm($event)"-->
+                             <!--(editConfirm)="onSaveConfirm($event)"></ng2-smart-table>-->
+            <table class="table table-responsive">
+              <thead>
+              <tr>
+                <th>ID</th>
+                <th>Product Name</th>
+                <th>Category Name</th>
+                <th>Product Price / Unit</th>
+                <th>Product Qty</th>
+                <th>Actions</th>
+              </tr>
+              </thead>
+              <tbody>
+
+              <tr *ngFor="let product of productList">
+
+                <td>{{product.product_id}}</td>
+                <td>{{product.product_name}}</td>
+                <td>{{product.category_name}}</td>
+                <td>Rs {{product.product_price_per_unit}}</td>
+                <td>{{product.product_qty}}</td>
+                <td><a [routerLink]="'/inventory/edit-product/' + product.product_id" ><i class="ft-edit"></i></a>
+                  <a (click)="onDeleteConfirm(product.product_id)"><i class="ft-x"></i></a></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Advanced filter Ends-->

@@ -1,0 +1,65 @@
+<!--Login Page Starts-->
+<section id="login">
+    <div class="container-fluid">
+        <div class="row full-height-vh">
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <div class="card card-inverse gradient-indigo-purple text-center width-400">
+                    <div class="card-img overlap">
+                        <img alt="element 06" class="mb-1" src="assets/img/portrait/avatars/avatar-08.png" width="190">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-block">
+                            <h2>Login</h2>
+                            <form  (submit)="onSubmit()" [formGroup]="regularForm" novalidate>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                      <input type="text" class="form-control" id="username" placeholder="Username" formControlName="username" required>
+                                      <small class="form-text text-muted danger"
+                                             *ngIf="!regularForm.get('username').valid && (regularForm.get('username').dirty || regularForm.get('username').touched)">
+                                        Please enter your username!
+                                      </small>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <input type="password" class="form-control"  id="password" placeholder="Password"
+                                               formControlName="password" required>
+                                      <small class="form-text text-muted danger"
+                                             *ngIf="!regularForm.get('password').valid && (regularForm.get('password').dirty || regularForm.get('password').touched)">
+                                        Please enter your password!
+                                      </small>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                                                <input type="checkbox" formControlName="rememberMe" id="rememberMe" class="custom-control-input" checked="false">
+                                                <span class="custom-control-indicator ml-4"></span>
+                                                <span class="pl-2">Remember Me</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn btn-pink btn-block btn-raised" [disabled]="!regularForm.valid">Submit</button>
+                                        <button type="button" class="btn btn-secondary btn-block btn-raised" (click)="reset()">Cancel</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="float-left"><a (click)="onForgotPassword()">Recover Password</a></div>
+                        <div class="float-right"><a (click)="onRegister()">New User?</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Login Page Ends-->
