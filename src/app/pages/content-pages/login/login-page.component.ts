@@ -23,7 +23,13 @@ export class LoginPageComponent implements OnInit {
     });
   }
   ngOnInit() {
-    // this._authService.doRegister({username: 'aksaxena1991', password: '1234'});
+    this._authService.getAuth().then(res => {
+      if (res.length === 0) {
+        this._authService.doRegister({username: 'aksaxena1991', password: '1234'});
+      }
+    }).catch(error => {
+      console.log(error);
+    });
   }
   // On submit button click
   onSubmit() {

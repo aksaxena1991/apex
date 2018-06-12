@@ -10,7 +10,7 @@ import {MatchHeightModule} from '../shared/directives/match-height.directive';
 import {AddCategoryComponent} from './category/add-category/add-category.component';
 import {EditCategoryComponent} from './category/edit-category/edit-category.component';
 import {ViewCategoryComponent} from './category/view-category/view-category.component';
-import { Ng2SmartTableModule } from 'ng2-smart-table';
+
 import {AddProductComponent} from './product/add-product/add-product.component';
 import {EditProductComponent} from './product/edit-product/edit-product.component';
 import {ViewProductComponent} from './product/view-product/view-product.component';
@@ -18,7 +18,6 @@ import {ViewProductComponent} from './product/view-product/view-product.componen
 @NgModule({
   imports: [
     CommonModule,
-    Ng2SmartTableModule,
     InventoryRoutingModule,
     ReactiveFormsModule,
     FormsModule,

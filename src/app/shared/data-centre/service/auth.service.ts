@@ -10,7 +10,6 @@ export class AuthService extends BaseService {
     super();
   }
   doLogin(creds: RegisterModel) {
-    console.log(creds);
     return this.connection.select<RegisterModel>({
       from: 'Auth',
       where: {
@@ -24,6 +23,11 @@ export class AuthService extends BaseService {
       into: 'Auth',
       return: true,
       values: [creds]
+    });
+  }
+  getAuth() {
+    return this.connection.select<RegisterModel>({
+      from: 'Auth'
     });
   }
   createSession(creds: RegisterModel) {

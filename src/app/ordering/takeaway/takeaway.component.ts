@@ -5,6 +5,7 @@ import {ToastrService} from '../../shared/services/toastr.service';
 import {Router} from '@angular/router';
 import * as _ from 'lodash';
 import {SettingService} from '../../shared/data-centre/service/setting.service';
+import {SettingModel} from '../../shared/data-centre/model/setting.model';
 
 @Component({
   selector: 'app-takeaway',
@@ -17,10 +18,11 @@ export class TakeawayComponent implements OnInit {
   data = [];
   searchResults = new Set();
   searchdData = [];
+  search = '';
   enable = false;
   cartItems = [];
   sum = 0;
-  activatedSetting = {};
+  activatedSetting: SettingModel;
   constructor(private _categoryService: CategoryService,
               private _toastrService: ToastrService,
               private _router: Router,
