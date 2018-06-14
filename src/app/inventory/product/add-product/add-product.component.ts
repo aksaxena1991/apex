@@ -4,7 +4,7 @@ import {ToastrService} from '../../../shared/services/toastr.service';
 import {ProductService} from '../../../shared/data-centre/service/product.service';
 import {CategoryService} from '../../../shared/data-centre/service/category.service';
 import {CategoryModel} from '../../../shared/data-centre/model/category.model';
-import {ProductModel} from "../../../shared/data-centre/model/product.model";
+import {ProductModel} from '../../../shared/data-centre/model/product.model';
 
 @Component({
   selector: 'app-product',

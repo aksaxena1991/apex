@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from "@angular/common";
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { FullPagesRoutingModule } from "./full-pages-routing.module";
+import { FullPagesRoutingModule } from './full-pages-routing.module';
 import { ChartistModule} from 'ng-chartist';
 import { AgmCoreModule } from '@agm/core';
 
-import { GalleryPageComponent } from "./gallery/gallery-page.component";
-import { InvoicePageComponent } from "./invoice/invoice-page.component";
-import { HorizontalTimelinePageComponent } from "./timeline/horizontal/horizontal-timeline-page.component";
-import { VerticalTimelinePageComponent } from "./timeline/vertical/vertical-timeline-page.component";
-import { UserProfilePageComponent } from "./user-profile/user-profile-page.component";
+import { GalleryPageComponent } from './gallery/gallery-page.component';
+import { InvoicePageComponent } from './invoice/invoice-page.component';
+import { HorizontalTimelinePageComponent } from './timeline/horizontal/horizontal-timeline-page.component';
+import { VerticalTimelinePageComponent } from './timeline/vertical/vertical-timeline-page.component';
 
 
 @NgModule({
@@ -21,12 +20,11 @@ import { UserProfilePageComponent } from "./user-profile/user-profile-page.compo
         ChartistModule,
         AgmCoreModule
     ],
-    declarations: [       
+    declarations: [
         GalleryPageComponent,
-        InvoicePageComponent,       
+        InvoicePageComponent,
         HorizontalTimelinePageComponent,
-        VerticalTimelinePageComponent,
-        UserProfilePageComponent
+        VerticalTimelinePageComponent
     ]
 })
 export class FullPagesModule { }

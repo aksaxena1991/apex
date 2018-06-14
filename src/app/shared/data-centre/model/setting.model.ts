@@ -4,6 +4,7 @@ export interface SettingModel {
   valid_from?: string;
   valid_to?: string;
   activation: boolean;
+  isPaid: boolean;
   logo?: string;
   address?: string;
   registered_email?: string;
@@ -14,15 +15,20 @@ export interface SettingModel {
   cgst?: string;
   sgst?: string;
 }
-
-
 export class Setting implements SettingModel {
-  setting_id ;
-  // licence_no = '';
-  // valid_from = '';
-  // valid_to = '';
-  activation;
-  // registered_email = '';
-  // logo = '';
-  // address = '';
+  setting_id = 0 ;
+  licence_no = '';
+  valid_from = '';
+  valid_to = '';
+  activation = false;
+  isPaid = false;
+  registered_email = '';
+  logo = '';
+  address = '';
+  bank_name = '';
+  ifsc_code = '';
+  account_no = '';
+  account_holder_name = '';
+  cgst = '';
+  sgst = '';
 }

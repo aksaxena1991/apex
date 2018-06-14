@@ -81,116 +81,34 @@ export const ROUTES: RouteInfo[] = [
       }
     ]
   },
-  // {
-  //   path: '', title: 'Pages', icon: 'ft-copy', class: 'has-sub', badge: '', badgeClass: '', isExternalLink: false,
-  //   submenu: [
-  //     {
-  //       path: '/pages/forgotpassword',
-  //       title: 'Forgot Password',
-  //       icon: '',
-  //       class: '',
-  //       badge: '',
-  //       badgeClass: '',
-  //       isExternalLink: false,
-  //       submenu: []
-  //     },
-  //     {
-  //       path: '/pages/login',
-  //       title: 'Login',
-  //       icon: '',
-  //       class: '',
-  //       badge: '',
-  //       badgeClass: '',
-  //       isExternalLink: false,
-  //       submenu: []
-  //     },
-  //     {
-  //       path: '/pages/register',
-  //       title: 'Register',
-  //       icon: '',
-  //       class: '',
-  //       badge: '',
-  //       badgeClass: '',
-  //       isExternalLink: false,
-  //       submenu: []
-  //     },
-  //     {
-  //       path: '/pages/profile',
-  //       title: 'User Profile',
-  //       icon: '',
-  //       class: '',
-  //       badge: '',
-  //       badgeClass: '',
-  //       isExternalLink: false,
-  //       submenu: []
-  //     },
-  //     {
-  //       path: '/pages/lockscreen',
-  //       title: 'Lock Screen',
-  //       icon: '',
-  //       class: '',
-  //       badge: '',
-  //       badgeClass: '',
-  //       isExternalLink: false,
-  //       submenu: []
-  //     },
-  //     {
-  //       path: '/pages/invoice',
-  //       title: 'Invoice',
-  //       icon: '',
-  //       class: '',
-  //       badge: '',
-  //       badgeClass: '',
-  //       isExternalLink: false,
-  //       submenu: []
-  //     },
-  //     {
-  //       path: '/pages/error',
-  //       title: 'Error',
-  //       icon: '',
-  //       class: '',
-  //       badge: '',
-  //       badgeClass: '',
-  //       isExternalLink: false,
-  //       submenu: []
-  //     },
-  //     {
-  //       path: '/pages/comingsoon',
-  //       title: 'Coming Soon',
-  //       icon: '',
-  //       class: '',
-  //       badge: '',
-  //       badgeClass: '',
-  //       isExternalLink: false,
-  //       submenu: []
-  //     },
-  //     {
-  //       path: '/pages/maintenance',
-  //       title: 'Maintenance',
-  //       icon: '',
-  //       class: '',
-  //       badge: '',
-  //       badgeClass: '',
-  //       isExternalLink: false,
-  //       submenu: []
-  //     },
-  //     {
-  //       path: '/pages/gallery',
-  //       title: 'Gallery',
-  //       icon: '',
-  //       class: '',
-  //       badge: '',
-  //       badgeClass: '',
-  //       isExternalLink: false,
-  //       submenu: []
-  //     },
-  //   ]
-  // }
   {path: '', title: 'Ordering', icon: 'ft-copy', class: 'has-sub', badge: '', badgeClass: '', isExternalLink: false,
     submenu: [
       {
         path: '/ordering/takeaway',
         title: 'Takeaway',
+        icon: '',
+        class: '',
+        badge: '',
+        badgeClass: '',
+        isExternalLink: false,
+        submenu: []
+      }
+    ]},
+  {path: '', title: 'Setting', icon: 'ft-settings', class: 'has-sub', badge: '', badgeClass: '', isExternalLink: false,
+    submenu: [
+      {
+        path: '/setting/profile',
+        title: 'User Profile',
+        icon: '',
+        class: '',
+        badge: '',
+        badgeClass: '',
+        isExternalLink: false,
+        submenu: []
+      },
+      {
+        path: '/setting/app-setting',
+        title: 'App Settings',
         icon: '',
         class: '',
         badge: '',

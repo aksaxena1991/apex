@@ -1,0 +1,253 @@
+<!--User Profile Starts-->
+<!--Basic User Details Starts-->
+<section id="user-profile">
+  <div class="row">
+    <div class="col-12">
+      <div class="card profile-with-cover">
+        <div class="card-img-top img-fluid bg-cover height-300"
+             style="background: url('assets/img/photos/14.jpg') 50%;"></div>
+        <div class="media profil-cover-details row">
+          <div class="col-5">
+            <div class="align-self-start halfway-fab pl-3 pt-2">
+              <div class="text-left">
+                <h3 class="card-title white">Jose Diaz</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="align-self-center halfway-fab text-center">
+              <a class="profile-image">
+                <img src="assets/img/portrait/avatars/avatar-08.png"
+                     class="rounded-circle img-border gradient-summer width-100" alt="Card image">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="profile-section">
+          <div class="row">
+            <div class="col-lg-5 col-md-5 ">
+              <ul class="profile-menu no-list-style">
+                <li>
+                  <a (click)="showPage('About')"
+                     [ngClass]="currentPage === 'About' ? 'primary font-medium-2 font-weight-600 active' : 'primary font-medium-2 font-weight-600'">About</a>
+                </li>
+
+              </ul>
+            </div>
+            <div class="col-lg-2 col-md-2 text-center">
+              <span class="font-medium-2 text-uppercase">Jose Diaz</span>
+              <p class="grey font-small-2">Ninja Developer</p>
+            </div>
+            <div class="col-lg-5 col-md-5">
+              <ul class="profile-menu no-list-style">
+                <li>
+                  <a (click)="showPage('Edit')"
+                     [ngClass]="currentPage === 'Edit' ? 'primary font-medium-2 font-weight-600 active' : 'primary font-medium-2 font-weight-600'">Edit
+                    Profile</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Basic User Details Ends-->
+
+<!--About section starts-->
+<section id="about" *ngIf="currentPage === 'About'">
+  <div class="row">
+    <div class="col-12">
+      <div class="content-header">About</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          <h5>Personal Information</h5>
+        </div>
+        <div class="card-body">
+          <div class="card-block">
+            <div class="mb-3">
+              <span class="text-bold-500 primary">About Me:</span>
+              <span class="display-block overflow-hidden">Hi, I’m Jose, I’m 29 and I work as a Ninja Developer for the
+                                “PIXINVENT” Creative Studio. In my research, I follow the flow of early medieval slavery from viking
+                                raids in the west, through the booming ports of the Scandinavian north, and out into the Islamic world.
+                                Reading texts against the grain and seeing artifacts as traces of the past can make their lives once
+                                again visible to us today. This website documents my efforts to do just that, and I hope it will prove
+                                a resource and an inspiration for others in similar pursuits.
+                            </span>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-4">
+                <ul class="no-list-style">
+
+                  <li class="mb-2">
+                    <span class="text-bold-500 primary"><a><i class="ft-user font-small-3"></i> Gender:</a></span>
+                    <span class="display-block overflow-hidden">Male</span>
+                  </li>
+                  <li class="mb-2">
+                    <span class="text-bold-500 primary"><a><i
+                      class="ft-briefcase font-small-3"></i> Occupation:</a></span>
+                    <span class="display-block overflow-hidden">Ninja Developer</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                <ul class="no-list-style">
+
+                  <li class="mb-2">
+                    <span class="text-bold-500 primary"><a><i class="ft-mail font-small-3"></i> Email:</a></span>
+                    <a class="display-block overflow-hidden">jose@yourmail.com</a>
+                  </li>
+                  <li class="mb-2">
+                    <span class="text-bold-500 primary"><a><i class="ft-monitor font-small-3"></i> Website:</a></span>
+                    <a class="display-block overflow-hidden">pixinvent.com</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                <ul class="no-list-style">
+                  <li class="mb-2">
+                    <span class="text-bold-500 primary"><a><i class="ft-smartphone font-small-3"></i> Phone Number:</a></span>
+                    <span class="display-block overflow-hidden">(012) 345 - 678 - 9910</span>
+                  </li>
+
+                  <li class="mb-2">
+                    <span class="text-bold-500 primary"><a><i class="ft-book font-small-3"></i> Joined:</a></span>
+                    <span class="display-block overflow-hidden">April 1st, 2012</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <hr>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--About section ends-->
+
+
+<!--User's friend section starts-->
+<section id="friends" *ngIf="currentPage === 'Edit'">
+  <div class="row">
+    <div class="col-12">
+      <div class="content-header">Edit Profile</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class=" col-md-12 ">
+      <div class="card">
+        <div class="card-header text-center">
+          <img src="./assets/img/portrait/small/avatar-s-3.png" alt="Brek" width="150"
+               class="rounded-circle gradient-mint">
+        </div>
+        <div class="card-body">
+          <div class="card-block text-center">
+            <form class="form">
+
+              <div class="row justify-content-md-center">
+                <div class="col-md-6">
+                  <div class="form-body">
+                    <div class="row">
+                      <div class="form-group col-12 mb-2 ">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" class="form-control" placeholder="name" name="fullname">
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group col-12 mb-2">
+                        <label for="occupation">Occupation</label>
+                        <input type="text" id="occupation" class="form-control" placeholder="Occupation"
+                               name="Occupation">
+                      </div>
+                    </div>
+
+
+                    <div class="row">
+                      <div class="form-group col-12 mb-2">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" placeholder="Email" name="email">
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group col-12 mb-2">
+                        <label for="contact_no">Contact Number</label>
+                        <input type="tel" id="contact_no" class="form-control" name="contact_no"
+                               placeholder="Contact Number">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group col-12 mb-2">
+                        <label>Gender</label>
+                        <div class="input-group">
+                          <label class="display-inline-block custom-control custom-radio ml-1">
+                            <input type="radio" name="gender" checked class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description ml-0">Male</span>
+                          </label>
+                          <label class="display-inline-block custom-control custom-radio">
+                            <input type="radio" name="gender" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description ml-0">Female</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group col-12 mb-2">
+                        <label for="about_us">About Us</label>
+                        <textarea id="about_us" class="form-control" name="about_us"
+                                  placeholder="About Us"></textarea>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group col-12 mb-2">
+                        <label>Customer Status</label>
+                        <div class="input-group">
+                          <label class="display-inline-block custom-control custom-radio ml-1">
+                            <input type="radio" name="status" checked class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description ml-0">Active</span>
+                          </label>
+                          <label class="display-inline-block custom-control custom-radio">
+                            <input type="radio" name="status" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description ml-0">Inactive</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-actions center">
+
+                    <button type="button" class="btn btn-lg gradient-pomegranate font-small-2 white p-2 mr-2">
+                      <i class="fa fa-check-square-o"></i> Update
+                    </button>
+                    <button type="button" class="btn btn-lg btn-outline-grey font-small-2 p-2">
+                      <i class="ft-x"></i> Cancel
+                    </button>
+
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!--User's friend section starts-->
+<!--User Profile Starts-->

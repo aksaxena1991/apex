@@ -97,6 +97,11 @@ export class BaseService {
           dataType: DATA_TYPE.String
         },
         {
+          name: 'isPaid',
+          notNull: true,
+          dataType: DATA_TYPE.Boolean
+        },
+        {
           name: 'valid_from',
           notNull: false,
           dataType: DATA_TYPE.String
