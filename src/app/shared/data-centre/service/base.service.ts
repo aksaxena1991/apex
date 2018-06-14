@@ -97,9 +97,19 @@ export class BaseService {
           dataType: DATA_TYPE.String
         },
         {
-          name: 'isPaid',
+          name: 'is_paid',
           notNull: true,
           dataType: DATA_TYPE.Boolean
+        },
+        {
+          name: 'tin_no',
+          notNull: false,
+          dataType: DATA_TYPE.String
+        },
+        {
+          name: 'gst_no',
+          notNull: false,
+          dataType: DATA_TYPE.String
         },
         {
           name: 'valid_from',
@@ -154,12 +164,12 @@ export class BaseService {
         {
           name: 'cgst',
           notNull: false,
-          dataType: DATA_TYPE.String
+          dataType: DATA_TYPE.Number
         },
         {
           name: 'sgst',
           notNull: false,
-          dataType: DATA_TYPE.String
+          dataType: DATA_TYPE.Number
         }]
     }
     const sessionTable: ITable = {

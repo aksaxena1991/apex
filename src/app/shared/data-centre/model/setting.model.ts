@@ -3,8 +3,8 @@ export interface SettingModel {
   licence_no?: string;
   valid_from?: string;
   valid_to?: string;
-  activation: boolean;
-  isPaid: boolean;
+  activation?: boolean;
+  isPaid?: boolean;
   logo?: string;
   address?: string;
   registered_email?: string;
@@ -12,8 +12,8 @@ export interface SettingModel {
   ifsc_code?: string;
   account_no?: string;
   account_holder_name?: string;
-  cgst?: string;
-  sgst?: string;
+  cgst?: number;
+  sgst?: number;
 }
 export class Setting implements SettingModel {
   setting_id = 0 ;
@@ -29,6 +29,6 @@ export class Setting implements SettingModel {
   ifsc_code = '';
   account_no = '';
   account_holder_name = '';
-  cgst = '';
-  sgst = '';
+  cgst = 0;
+  sgst = 0;
 }

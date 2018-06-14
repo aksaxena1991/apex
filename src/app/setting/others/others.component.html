@@ -20,7 +20,9 @@
 
                 <div class="form-group">
                   <label for="account_holder_name">Account Holder Name</label>
-                  <input type="text" id="account_holder_name" [value]="currentSetting.account_holder_name" formControlName="account_holder_name" class="form-control"   data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Account Holder Name">
+                  <input type="text" id="account_holder_name" [value]="currentSetting.account_holder_name"
+                         formControlName="account_holder_name" class="form-control" data-toggle="tooltip"
+                         data-trigger="hover" data-placement="top" data-title="Account Holder Name">
                   <small class="form-text text-muted danger"
                          *ngIf="!accountSettingForm.get('account_holder_name').valid && (accountSettingForm.get('account_holder_name').dirty || accountSettingForm.get('account_holder_name').touched)">
                     Please enter account holder name!
@@ -29,7 +31,9 @@
 
                 <div class="form-group">
                   <label for="bank_name">Bank Name</label>
-                  <input type="text" id="bank_name" class="form-control" [value]="currentSetting.bank_name"  formControlName="bank_name"  data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Bank Name">
+                  <input type="text" id="bank_name" class="form-control" [value]="currentSetting.bank_name"
+                         formControlName="bank_name" data-toggle="tooltip" data-trigger="hover" data-placement="top"
+                         data-title="Bank Name">
                   <small class="form-text text-muted danger"
                          *ngIf="!accountSettingForm.get('bank_name').valid && (accountSettingForm.get('bank_name').dirty || accountSettingForm.get('bank_name').touched)">
                     Please enter bank name!
@@ -37,7 +41,9 @@
                 </div>
                 <div class="form-group">
                   <label for="account_no">Account Number</label>
-                  <input type="text" id="account_no" class="form-control" [value]="currentSetting.account_no" formControlName="account_no"  data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Account Number">
+                  <input type="text" id="account_no" class="form-control" [value]="currentSetting.account_no"
+                         formControlName="account_no" data-toggle="tooltip" data-trigger="hover" data-placement="top"
+                         data-title="Account Number">
                   <small class="form-text text-muted danger"
                          *ngIf="!accountSettingForm.get('account_no').valid && (accountSettingForm.get('account_no').dirty || accountSettingForm.get('account_no').touched)">
                     Please enter account number!
@@ -46,7 +52,9 @@
 
                 <div class="form-group">
                   <label for="ifsc_code">IFSC Code</label>
-                  <input type="text" id="ifsc_code" class="form-control" [value]="currentSetting.ifsc_code" formControlName="ifsc_code"  data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="IFSC Code">
+                  <input type="text" id="ifsc_code" class="form-control" [value]="currentSetting.ifsc_code"
+                         formControlName="ifsc_code" data-toggle="tooltip" data-trigger="hover" data-placement="top"
+                         data-title="IFSC Code">
                   <small class="form-text text-muted danger"
                          *ngIf="!accountSettingForm.get('ifsc_code').valid && (accountSettingForm.get('ifsc_code').dirty || accountSettingForm.get('ifsc_code').touched)">
                     Please enter IFSC code!
@@ -101,7 +109,7 @@
 
               <div class="form-actions">
 
-                <button type="submit"  class="btn btn-raised btn-primary" [disabled]="!accountSettingForm.valid">
+                <button type="submit" class="btn btn-raised btn-primary" [disabled]="!accountSettingForm.valid">
                   <i class="fa fa-check-square-o"></i> {{doOperation}}
                 </button>
 
@@ -121,56 +129,144 @@
         <div class="card-body">
           <div class="px-3">
 
-            <form class="form">
+            <form class="form" [formGroup]="licenceInfoForm" (submit)="saveSettings('licence-settings')">
               <div class="form-body">
                 <div class="form-group">
                   <label for="licence_no">Licence Number / Key</label>
                   <div class="position-relative has-icon-left">
-                    <input type="text" id="licence_no" class="form-control"  name="Licence Key">
+                    <input type="text" id="licence_no" formControlName="licence_no" [value]="currentSetting.licence_no" class="form-control"
+                           name="Licence Key">
                     <div class="form-control-position">
                       <i class="fa fa-briefcase"></i>
                     </div>
+                    <small class="form-text text-muted danger"
+                           *ngIf="!licenceInfoForm.get('licence_no').valid && (licenceInfoForm.get('licence_no').dirty || licenceInfoForm.get('licence_no').touched)">
+                      Please enter licence key!
+                    </small>
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label for="valid_from">Valid From</label>
                   <div class="position-relative has-icon-left">
-                    <input type="date" id="valid_from" class="form-control" name="valid_from">
+                    <input type="date" id="valid_from" class="form-control" [value]="currentSetting.valid_from" name="valid_from"
+                           formControlName="valid_from">
                     <div class="form-control-position">
                       <i class="ft-message-square"></i>
                     </div>
+                    <small class="form-text text-muted danger"
+                           *ngIf="!licenceInfoForm.get('valid_from').valid && (licenceInfoForm.get('valid_from').dirty || licenceInfoForm.get('valid_from').touched)">
+                      Licence key valid from!
+                    </small>
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label for="valid_to">Valid To</label>
                   <div class="position-relative has-icon-left">
-                    <input type="date" id="valid_to" class="form-control" name="valid_to">
+                    <input type="date" id="valid_to" class="form-control" name="valid_to" [value]="currentSetting.valid_to" formControlName="valid_to">
                     <div class="form-control-position">
                       <i class="ft-message-square"></i>
                     </div>
+                    <small class="form-text text-muted danger"
+                           *ngIf="!licenceInfoForm.get('valid_to').valid && (licenceInfoForm.get('valid_to').dirty || licenceInfoForm.get('valid_to').touched)">
+                      Licence key valid to!
+                    </small>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label>Amount</label>
+                  <label>Paid Version</label>
                   <div class="input-group">
-                    <span class="input-group-addon">$</span>
-                    <input type="text" class="form-control"  aria-label="Amount (to the nearest dollar)" name="amount">
-                    <span class="input-group-addon">.00</span>
+                    <input type="text" class="form-control" aria-label="Paid Version" name="is_paid" [value]="currentSetting.is_paid"
+                           formControlName="is_paid">
+                    <div class="form-control-position">
+                      <i class="fa fa-briefcase"></i>
+                    </div>
                   </div>
                 </div>
+
+              </div>
+
+              <div class="form-actions right">
+                <button type="submit" class="btn btn-raised btn-primary" [disabled]="!licenceInfoForm.valid">
+                  <i class="fa fa-check-square-o"></i> {{doOperation}}
+                </button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title" id="basic-layout-icons">Taxation Settings</h4>
+        </div>
+        <div class="card-body">
+          <div class="px-3">
+
+            <form class="form" [formGroup]="taxForm" (submit)="saveSettings('taxation-settings')">
+              <div class="form-body">
+                <div class="form-group">
+                  <label for="tin_no">TIN No.</label>
+                  <div class="position-relative has-icon-left">
+                    <input type="text" id="tin_no" formControlName="tin_no" [value]="currentSetting.tin_no" class="form-control"
+                           name="TIN Number">
+                                        <small class="form-text text-muted danger"
+                           *ngIf="!taxForm.get('tin_no').valid && (taxForm.get('tin_no').dirty || taxForm.get('tin_no').touched)">
+                      Please enter tin number!
+                    </small>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="gst_no">GST No.</label>
+                  <div class="position-relative has-icon-left">
+                    <input type="text" id="gst_no" class="form-control" name="gst_no" [value]="currentSetting.gst_no"
+                           formControlName="gst_no">
+
+                    <small class="form-text text-muted danger"
+                           *ngIf="!taxForm.get('gst_no').valid && (taxForm.get('gst_no').dirty || taxForm.get('gst_no').touched)">
+                      Please enter gst number!
+                    </small>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="sgst">SGST%</label>
+                  <div class="position-relative has-icon-left">
+                    <input type="number" min="0" id="sgst" class="form-control" name="sgst" [value]="currentSetting.sgst" formControlName="sgst">
+
+                    <small class="form-text text-muted danger"
+                           *ngIf="!taxForm.get('sgst').valid && (taxForm.get('sgst').dirty || taxForm.get('sgst').touched)">
+                      Please enter SGST %!
+                    </small>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="cgst">CGST%</label>
+                  <div class="position-relative has-icon-left">
+                    <input type="number" min="0" id="cgst" class="form-control" name="cgst" [value]="currentSetting.cgst" formControlName="cgst">
+
+                    <small class="form-text text-muted danger"
+                           *ngIf="!taxForm.get('cgst').valid && (taxForm.get('cgst').dirty || taxForm.get('cgst').touched)">
+                      Please enter CGST %!
+                    </small>
+                  </div>
+                </div>
+
 
 
               </div>
 
               <div class="form-actions right">
-                <button type="button" class="btn btn-raised btn-warning mr-1">
-                  <i class="ft-x"></i> Cancel
-                </button>
-                <button type="button" class="btn btn-raised btn-primary">
-                  <i class="fa fa-check-square-o"></i> Save
+                <button type="submit" class="btn btn-raised btn-primary" [disabled]="!taxForm.valid">
+                  <i class="fa fa-check-square-o"></i> {{doOperation}}
                 </button>
               </div>
             </form>
