@@ -28,20 +28,6 @@ export class TakeawayComponent implements OnInit {
               private _router: Router,
               private _settingService: SettingService,
               private _productService: ProductService) {
-    // console.log(_settingService.addSetting({
-    //   activation: false,
-    //   bank_name: 'ICIC Bank',
-    //   account_holder_name: 'Anubhav Saxena',
-    //   account_no: '061001534410',
-    //   ifsc_code: 'ICIC0000610',
-    //   address: 'B-128,129 Utsav Vihar Near Karala, New Delhi - 110081',
-    //   licence_no: 'NA',
-    //   cgst: '5',
-    //   sgst: '5',
-    //   registered_email: 'aksaxena1991@gmail.com',
-    //   valid_from: '',
-    //   valid_to: ''
-    // }));
   }
 
   ngOnInit() {

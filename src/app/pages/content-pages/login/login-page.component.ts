@@ -23,13 +23,6 @@ export class LoginPageComponent implements OnInit {
     });
   }
   ngOnInit() {
-    this._authService.getAuth().then(res => {
-      if (res.length === 0) {
-        this._authService.doRegister({username: 'aksaxena1991', password: '1234'});
-      }
-    }).catch(error => {
-      console.log(error);
-    });
   }
   // On submit button click
   onSubmit() {
@@ -57,11 +50,12 @@ export class LoginPageComponent implements OnInit {
 
   // On Forgot password link click
   onForgotPassword() {
+    this._router.navigate(['pages', 'forgotpassword']);
   }
 
   // On registration link click
   onRegister() {
-    // this.router.navigate(['register'], { relativeTo: this.route.parent });
+    this._router.navigate(['pages', 'register']);
   }
 
   reset() {

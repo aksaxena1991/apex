@@ -14,6 +14,7 @@ import {ToastrService} from './services/toastr.service';
 import {AuthService} from './data-centre/service/auth.service';
 import {ProductService} from './data-centre/service/product.service';
 import {SettingService} from './data-centre/service/setting.service';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 @NgModule({
     exports: [
@@ -23,7 +24,8 @@ import {SettingService} from './data-centre/service/setting.service';
         SidebarComponent,
         CustomizerComponent,
         ToggleFullscreenDirective,
-        NgbModule
+        NgbModule,
+      HttpClientModule
     ],
     imports: [
         RouterModule,
@@ -32,7 +34,7 @@ import {SettingService} from './data-centre/service/setting.service';
     ],
   providers: [CategoryService, ToastrService, AuthService,
     SettingService,
-    ProductService],
+    ProductService, HttpClient],
     declarations: [
         FooterComponent,
         NavbarComponent,

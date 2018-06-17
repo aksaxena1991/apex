@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-
 import { ContentPagesRoutingModule } from './content-pages-routing.module';
-
 import { ComingSoonPageComponent } from './coming-soon/coming-soon-page.component';
 import { ErrorPageComponent } from './error/error-page.component';
 import { ForgotPasswordPageComponent } from './forgot-password/forgot-password-page.component';
@@ -18,8 +16,7 @@ import { RegisterPageComponent } from './register/register-page.component';
         CommonModule,
         ContentPagesRoutingModule,
         FormsModule,
-      ReactiveFormsModule
-    ],
+      ReactiveFormsModule],
     declarations: [
         ComingSoonPageComponent,
         ErrorPageComponent,

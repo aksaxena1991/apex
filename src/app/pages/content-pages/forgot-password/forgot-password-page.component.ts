@@ -1,31 +1,37 @@
-import { Component, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { Router, ActivatedRoute } from "@angular/router";
+import {Component} from '@angular/core';
+import {Router, ActivatedRoute} from '@angular/router';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
-    selector: 'app-forgot-password-page',
-    templateUrl: './forgot-password-page.component.html',
-    styleUrls: ['./forgot-password-page.component.scss']
+  selector: 'app-forgot-password-page',
+  templateUrl: './forgot-password-page.component.html',
+  styleUrls: ['./forgot-password-page.component.scss']
 })
 
 export class ForgotPasswordPageComponent {
-    @ViewChild('f') forogtPasswordForm: NgForm;
+  forgotPasswordForm: FormGroup;
 
-    constructor(private router: Router,
-        private route: ActivatedRoute) { }
+  constructor(private _router: Router,
+              private _activateRoute: ActivatedRoute) {
+    this.forgotPasswordForm = new FormGroup({
+      'reg_email': new FormControl(null, [Validators.required])
+    });
+  }
 
-    // On submit click, reset form fields
-    onSubmit() {
-        this.forogtPasswordForm.reset();
-    }
+  onSubmit() {
+    console.log(this.forgotPasswordForm);
+  }
+  onCancel() {
+    this.forgotPasswordForm.reset();
+  }
 
-    // On login link click
-    onLogin() {
-        this.router.navigate(['login'], { relativeTo: this.route.parent });
-    }
+  // On login link click
+  onLogin() {
+    this._router.navigate(['login'], {relativeTo: this._activateRoute.parent});
+  }
 
-    // On registration link click
-    onRegister() {
-        this.router.navigate(['register'], { relativeTo: this.route.parent });
-    }
+  // On registration link click
+  onRegister() {
+    this._router.navigate(['register'], {relativeTo: this._activateRoute.parent});
+  }
 }

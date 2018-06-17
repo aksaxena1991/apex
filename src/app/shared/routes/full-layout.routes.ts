@@ -11,10 +11,7 @@ export const Full_ROUTES: Routes = [
     path: 'inventory',
     loadChildren: './inventory/inventory.module#InventoryModule'
   },
-  {
-    path: 'pages',
-    loadChildren: './pages/full-pages/full-pages.module#FullPagesModule'
-  },
+
   {
     path: 'ordering',
     loadChildren: './ordering/ordering.module#OrderingModule'
