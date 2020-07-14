@@ -1,4 +1,4 @@
-import { Routes, RouterModule } from '@angular/router';
+import { Routes } from '@angular/router';
 // import {} from '../';
 // Route for content layout with sidebar, navbar and footer.
 

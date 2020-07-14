@@ -1,6 +1,6 @@
 import {IdbService} from './idb.service';
 import {IDataBase, DATA_TYPE, ITable} from 'jsstore';
-import {Table} from 'jsstore/dist/ts/codes/worker/model/table';
+// import {Table} from 'jsstore/dist/ts/codes/worker/model/table';
 
 export class BaseService {
   dbname = 'Apex_Billing_Application';
